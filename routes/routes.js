@@ -5,6 +5,8 @@ const { getSpotlightController } = require('../controllers/landing/spotlight.con
 const router = express.Router();
 const controller = require('../controllers/landing/proLearn.controller');
 const { getNewsLetterController } = require('../controllers/landing/newsLetter.controller');
+const { getClient } = require('../controllers/landing/client.controller');
+const { getPartner } = require('../controllers/landing/partner.controller');
 
 
 
@@ -26,5 +28,10 @@ router.delete('/prolearn/:id/courses/:courseId', controller.deleteCourse);
 //Newsletter Route
 
 router.get('/newsLetter',getNewsLetterController);
+
+//client
+
+router.get('/client',getClient);
+router.get('/partner',getPartner);
 
 module.exports = router;
